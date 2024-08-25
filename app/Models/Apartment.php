@@ -10,6 +10,14 @@ class Apartment extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'floor',
+        'apartment_number',
+        'area',
+        'number_bathrooms',
+        'other'
+    ];
+
     public function owner(): HasOne
     {
         return $this->hasOne(Owner::class);
